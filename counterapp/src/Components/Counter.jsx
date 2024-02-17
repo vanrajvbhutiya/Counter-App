@@ -2,22 +2,20 @@ import React from 'react'
 
 const Counter = () => {
     
-    const [count, setCount] = useState(0)
+    let [count, setCount] = useState(0)
+    //add value
     const addTheValue = ()=> {
-        setCount(()=>{
-            setCount = +1;
-        })
+        setCount(count++);
     }
+    //remove value 
     const subTheValue = ()=> {
-        setCount(()=>{
-            setCount = -1;
-        })
+        setCount(count--)
     }
   return (
     <div>
             <h2>Counter App Using ReactJs{count}</h2>
-            <button onClick={addTheValue}>+</button>
-            <button onClick={subTheValue}>+</button>
+            <button onClick={addTheValue}>add value</button>
+            <button onClick={subTheValue}>remove value</button>
    
     </div>
   )
